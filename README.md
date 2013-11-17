@@ -29,11 +29,15 @@ IDs are strings of one or two lowercase letters indicating an input
 //jQuery is not required
 jQuery(document).ready(function(){
 	window.wup.init();
-	window.wup.on('lu', function() {
-		alert("Left stick has been pushed up! (And beyond the threshold of 0.5)");
-	});
-	window.wup.on('zl', function() {
-		alert("ZL has been pressed!");
-	});
+	if ( window.wup.isValid() ) {
+		window.wup.on('lu', function() {
+			alert("Left stick has been pushed up! (And beyond the threshold of 0.5)");
+		});
+		window.wup.on('zl', function() {
+			alert("ZL has been pressed!");
+		});
+	} else {
+		alert("Couldn't find a Wii U Gamepad!");
+	}
 });
 ```
