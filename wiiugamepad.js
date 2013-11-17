@@ -1,21 +1,6 @@
 /*
 	Wrapper for Wii U Gamepad Controller API.
-	Usage:
-		1) This file instances WiiUGamePadController in window.wup
-		2) Whenever you're ready to start readaing inputs (on document ready) call .init()
-			NOTE: You can change the polling interval from the default 20ms with .setPollingInterval(MILLISECONDS), before or after .init()
-		3) Check that the API is available with .isValid()
-		4) Subscribe to key events with .on(ID, CALLBACK). Callbacks will be fired once per press, regardless of how long the button is pressed
-			NOTE: You can change the deadzone for stick inputs with .setDeadzone(FLOAT), where the float must be a number between 0 and 1
-		5) Unsubscribe with .off(ID) if necessary
-	
-	ID list:
-		(IDs are strings of one or two lowercase letters indicating an input
-		D-pad: du dd dl dr
-		Left stick: lu ld ll lr
-		Right stick: ru rd rl rr
-		Triggers: l r zl zr
-		Face buttons: a b x y
+	https://github.com/Nosgoroth/Wii-U-Gamepad-JS-API-wrapper/
 */
 
 
